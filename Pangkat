@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace::std;
+double pemangkatan(int angka, int pangkat1)
+{if (pangkat1==0)
+return 1;
+else
+return angka * pemangkatan(angka,pangkat1-1);
+}
+ main(){
+int angka2, pangkat,pangkat2;
+cout<<"||=====Program Pangkat=======";
+cout<<"\n||--------------------------";
+cout<<"\n||Input Angka   : ";cin>>angka2;
+cout<<"||input Pangkat : ";cin>>pangkat;
+if(pangkat>=0){pangkat2=pangkat;cout<<"||Hasil Pemangkatan = ";cout<<pemangkatan(angka2,pangkat2);}
+if(pangkat<=0){pangkat2= pangkat*(-1);cout<<"||Hasil Pemangkatan = ";cout<<1/pemangkatan(angka2,pangkat2);}
+cout<<"\n||--------------------------";
+cout<<endl;
+}
